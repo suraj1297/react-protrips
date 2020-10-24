@@ -1,0 +1,32 @@
+.all-trips {
+  width: 100%;
+  background-color: #0e1821;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.all-trips h1 {
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  margin-bottom: 30px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 50px 15px;
+}
+
+table tbody td,
+table thead td {
+  padding: 10px;
+}
+
+table thead td {
+  border-bottom: 1px solid white;
+}
+
+table tbody td {
+  border-bottom: 1px solid black;
+}
