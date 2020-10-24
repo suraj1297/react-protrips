@@ -17,7 +17,7 @@ export default class App extends Component {
     this.state = {
       trip: [{ place: "Bali", date: "2020-11-10", type: "Club" },
       { place: "Manali", date: "2021-05-15", type: "Trek" },
-      { place: "Amazon", date: "2021-07-01", type: "Tropical" },
+      { place: "Amazon", date: "2021-07-01", type: "Tropic" },
       { place: "Bali", date: "2021-10-25", type: "Trek" }]
     }
   }

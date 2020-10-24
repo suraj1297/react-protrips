@@ -26,7 +26,7 @@ function calculateTrips(trips) {
     let club = 0
 
     trips.forEach(trip => {
-        if (trip.type === "Tropical")
+        if (trip.type === "Tropic")
             tropical++
         else if (trip.type === "Trek")
             trek++
