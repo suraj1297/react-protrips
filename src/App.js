@@ -23,6 +23,9 @@ export default class App extends Component {
   }
 
   newTrip = (e) => {
+    // this function takes all the values entered in add new trip form and adds them into state
+    //  The form has three elements which are as follows
+    // Place Name, Dtae of Trip and Type of trip ex: Trek, Tropic, Club
     e.preventDefault()
     alert("Added Trip Successfully")
     this.setState(prevState => {
@@ -45,12 +48,15 @@ export default class App extends Component {
         <Navbar />
 
         <Switch>
+          {/* Will Load Home page which */}
           <Route exact path="/">
             <Home trips={this.state.trip} />
           </Route>
+          {/* Will load the form page for adding new trip */}
           <Route path="/addTrip">
             <AddTrip addTrip={this.newTrip} />
           </Route>
+          {/* Will  Show all the planned trips in tabular format */}
           <Route path="/allTrips">
             <AllTrips trips={this.state.trip} />
           </Route>

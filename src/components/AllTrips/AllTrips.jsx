@@ -4,6 +4,11 @@ import "./AllTrips.css"
 
 export default class AllTrips extends React.Component {
 
+    /* state = {
+        trips: [{place: string, date: dateString, type:string} ],
+        type : tropic/club/trek
+    }*/
+
     constructor(props) {
         super(props)
         this.state = {
@@ -13,13 +18,19 @@ export default class AllTrips extends React.Component {
     }
 
     changeType = (type) => {
+        // when user chooses any particular type of trip from filter section
+        // then that value is stored in state.type so that is can be used to filter
+        // specific type of trip
         this.setState({ type: type })
     }
 
     render() {
 
+        // variable for storing place based on type
         let tripsArray = []
 
+        // filter place from trips based on users choice if state.type is empty string
+        //  then it considers whole list
         if (this.state.type)
             tripsArray = this.state.trips.filter(trip => trip.type === this.state.type)
                 .map((trip, index) => <Trip key={index} {...trip} />)
@@ -39,7 +50,6 @@ export default class AllTrips extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {/* {this.state.trips.map((trip, index) => <Trip key={index} {...trip} />)} */}
                         {tripsArray}
                     </tbody>
                 </table>

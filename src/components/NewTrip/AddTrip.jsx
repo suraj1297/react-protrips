@@ -2,6 +2,9 @@ import React from 'react'
 import "./AddTrip.css"
 
 export default function AddTrip(props) {
+    // This function is all about asking user for adding new trip details like
+    // Place Name, Date, and Type of trip and will add the trip into state of app.js
+    // using newTrip()
     return (
         <div className="new-trip">
             <h1>Add a Trip</h1>
